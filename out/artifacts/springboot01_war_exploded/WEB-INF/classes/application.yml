@@ -1,0 +1,28 @@
+#spring:
+#  profiles:
+#    active: test
+
+server:
+  port: 8080
+  servlet:
+    context-path: /boot
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm} %-5level %logger- %msg%n "
+    level: info
+  file:
+    path: "."
+    name: "boot1.log"
+    max-history: 7
+    max-size: 5MB
+spring:
+#  freemarker:
+#    suffix: .ftl
+#    content-type: text/html
+#    charset: utf-8
+#    template-loader-path: classpath:/views/
+# thymeleaf配置项
+  thymeleaf:
+    prefix: classpath:/html/
+    cache: false
