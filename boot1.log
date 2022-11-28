@@ -1,0 +1,155 @@
+2022-11-28 20:12:27.435 info 1460 --- [main] com.xxx.App                              : Starting App on ViPC with PID 1460 (E:\idea-workspace\springboot01\target\classes started by Vincent.Lee in E:\idea-workspace\springboot01)
+2022-11-28 20:12:27.476 info 1460 --- [main] com.xxx.App                              : No active profile set, falling back to default profiles: default
+2022-11-28 20:12:29.923 info 1460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-28 20:12:29.948 info 1460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-28 20:12:29.949 info 1460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-11-28 20:12:30.097 info 1460 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2022-11-28 20:12:30.097 info 1460 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2426 ms
+2022-11-28 20:12:30.411 info 1460 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-28 20:12:30.802 info 1460 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2022-11-28 20:12:30.951 info 1460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/boot'
+2022-11-28 20:12:30.955 info 1460 --- [main] com.xxx.App                              : Started App in 5.53 seconds (JVM running for 9.436)
+2022-11-28 20:12:30.958 info 1460 --- [main] com.xxx.App                              : 这是info信息
+2022-11-28 20:13:06.311 info 1460 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-28 20:13:06.312 info 1460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-28 20:13:06.337 info 1460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2022-11-28 20:13:21.962 info 1460 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/boot] threw exception [Circular view path [index]: would dispatch back to the current handler URL [/boot/index] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)] with root cause
+
+javax.servlet.ServletException: Circular view path [index]: would dispatch back to the current handler URL [/boot/index] again. Check your ViewResolver setup! (Hint: This may be the result of an unspecified view, due to default view name generation.)
+	at org.springframework.web.servlet.view.InternalResourceView.prepareForRendering(InternalResourceView.java:210) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:148) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:316) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2022-11-28 20:15:14.842 info 1584 --- [main] com.xxx.App                              : Starting App on ViPC with PID 1584 (E:\idea-workspace\springboot01\target\classes started by Vincent.Lee in E:\idea-workspace\springboot01)
+2022-11-28 20:15:14.848 info 1584 --- [main] com.xxx.App                              : No active profile set, falling back to default profiles: default
+2022-11-28 20:15:16.567 info 1584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-28 20:15:16.580 info 1584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-28 20:15:16.581 info 1584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-11-28 20:15:16.697 info 1584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2022-11-28 20:15:16.698 info 1584 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1763 ms
+2022-11-28 20:15:16.956 info 1584 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-28 20:15:17.195 info 1584 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2022-11-28 20:15:17.267 info 1584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/boot'
+2022-11-28 20:15:17.271 info 1584 --- [main] com.xxx.App                              : Started App in 3.396 seconds (JVM running for 5.794)
+2022-11-28 20:15:17.273 info 1584 --- [main] com.xxx.App                              : 这是info信息
+2022-11-28 20:15:24.006 info 1584 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-28 20:15:24.007 info 1584 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-28 20:15:24.013 info 1584 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-11-28 20:16:34.647 info 16680 --- [main] com.xxx.App                              : Starting App on ViPC with PID 16680 (E:\idea-workspace\springboot01\target\classes started by Vincent.Lee in E:\idea-workspace\springboot01)
+2022-11-28 20:16:34.654 info 16680 --- [main] com.xxx.App                              : No active profile set, falling back to default profiles: default
+2022-11-28 20:16:36.946 info 16680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-28 20:16:36.959 info 16680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-28 20:16:36.959 info 16680 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-11-28 20:16:37.079 info 16680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2022-11-28 20:16:37.079 info 16680 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2320 ms
+2022-11-28 20:16:37.541 info 16680 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-28 20:16:37.812 info 16680 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2022-11-28 20:16:37.896 info 16680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/boot'
+2022-11-28 20:16:37.902 info 16680 --- [main] com.xxx.App                              : Started App in 4.202 seconds (JVM running for 6.465)
+2022-11-28 20:16:37.904 info 16680 --- [main] com.xxx.App                              : 这是info信息
+2022-11-28 20:16:44.097 info 16680 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-28 20:16:44.098 info 16680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-28 20:16:44.106 info 16680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-11-28 20:19:10.953 info 13256 --- [main] com.xxx.App                              : Starting App on ViPC with PID 13256 (E:\idea-workspace\springboot01\target\classes started by Vincent.Lee in E:\idea-workspace\springboot01)
+2022-11-28 20:19:10.957 info 13256 --- [main] com.xxx.App                              : No active profile set, falling back to default profiles: default
+2022-11-28 20:19:12.976 info 13256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-28 20:19:12.993 info 13256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-28 20:19:12.994 info 13256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-11-28 20:19:13.145 info 13256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2022-11-28 20:19:13.146 info 13256 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2089 ms
+2022-11-28 20:19:13.462 info 13256 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-28 20:19:13.757 info 13256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/boot'
+2022-11-28 20:19:13.761 info 13256 --- [main] com.xxx.App                              : Started App in 3.721 seconds (JVM running for 6.23)
+2022-11-28 20:19:13.763 info 13256 --- [main] com.xxx.App                              : 这是info信息
+2022-11-28 20:19:19.229 info 13256 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-28 20:19:19.230 info 13256 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-28 20:19:19.237 info 13256 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-11-28 20:19:49.458 info 3100 --- [main] com.xxx.App                              : Starting App on ViPC with PID 3100 (E:\idea-workspace\springboot01\target\classes started by Vincent.Lee in E:\idea-workspace\springboot01)
+2022-11-28 20:19:49.467 info 3100 --- [main] com.xxx.App                              : No active profile set, falling back to default profiles: default
+2022-11-28 20:19:52.299 info 3100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-28 20:19:52.320 info 3100 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-28 20:19:52.321 info 3100 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-11-28 20:19:52.616 info 3100 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2022-11-28 20:19:52.617 info 3100 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3057 ms
+2022-11-28 20:19:53.419 info 3100 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-28 20:19:53.902 info 3100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/boot'
+2022-11-28 20:19:53.910 info 3100 --- [main] com.xxx.App                              : Started App in 5.573 seconds (JVM running for 9.023)
+2022-11-28 20:19:53.913 info 3100 --- [main] com.xxx.App                              : 这是info信息
+2022-11-28 20:19:54.844 info 3100 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-28 20:19:54.845 info 3100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-28 20:19:54.855 info 3100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2022-11-28 20:56:25.516 info 16520 --- [main] com.xxx.App                              : Starting App on ViPC with PID 16520 (E:\idea-workspace\springboot01\target\classes started by Vincent.Lee in E:\idea-workspace\springboot01)
+2022-11-28 20:56:25.527 info 16520 --- [main] com.xxx.App                              : No active profile set, falling back to default profiles: default
+2022-11-28 20:56:27.318 info 16520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-28 20:56:27.339 info 16520 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-28 20:56:27.339 info 16520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-11-28 20:56:27.440 info 16520 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2022-11-28 20:56:27.440 info 16520 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1809 ms
+2022-11-28 20:56:27.669 info 16520 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-28 20:56:27.999 info 16520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/boot'
+2022-11-28 20:56:28.015 info 16520 --- [main] com.xxx.App                              : Started App in 3.489 seconds (JVM running for 6.531)
+2022-11-28 20:56:28.015 info 16520 --- [main] com.xxx.App                              : 这是info信息
+2022-11-28 20:59:38.739 info 5976 --- [main] com.xxx.App                              : Starting App on ViPC with PID 5976 (E:\idea-workspace\springboot01\target\classes started by Vincent.Lee in E:\idea-workspace\springboot01)
+2022-11-28 20:59:38.759 info 5976 --- [main] com.xxx.App                              : No active profile set, falling back to default profiles: default
+2022-11-28 20:59:40.970 info 5976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-28 20:59:40.990 info 5976 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-28 20:59:40.990 info 5976 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-11-28 20:59:41.131 info 5976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2022-11-28 20:59:41.131 info 5976 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2231 ms
+2022-11-28 20:59:41.442 info 5976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-28 20:59:41.701 info 5976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/boot'
+2022-11-28 20:59:41.716 info 5976 --- [main] com.xxx.App                              : Started App in 4.054 seconds (JVM running for 6.299)
+2022-11-28 20:59:41.716 info 5976 --- [main] com.xxx.App                              : 这是info信息
+2022-11-28 21:00:11.472 info 11516 --- [main] com.xxx.App                              : Starting App on ViPC with PID 11516 (E:\idea-workspace\springboot01\target\classes started by Vincent.Lee in E:\idea-workspace\springboot01)
+2022-11-28 21:00:11.474 info 11516 --- [main] com.xxx.App                              : No active profile set, falling back to default profiles: default
+2022-11-28 21:00:13.290 info 11516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-28 21:00:13.305 info 11516 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-28 21:00:13.305 info 11516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-11-28 21:00:13.547 info 11516 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/boot]   : Initializing Spring embedded WebApplicationContext
+2022-11-28 21:00:13.547 info 11516 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1972 ms
+2022-11-28 21:00:13.840 info 11516 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-28 21:00:14.082 info 11516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/boot'
+2022-11-28 21:00:14.086 info 11516 --- [main] com.xxx.App                              : Started App in 3.502 seconds (JVM running for 5.871)
+2022-11-28 21:00:14.087 info 11516 --- [main] com.xxx.App                              : 这是info信息
