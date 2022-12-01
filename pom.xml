@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>spring-boot-dependencies</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <version>2.2.2.RELEASE</version>
+  </parent>
 
   <groupId>com.xxx</groupId>
   <artifactId>springboot01</artifactId>
@@ -20,11 +25,7 @@
   </properties>
 
 
-  <parent>
-    <artifactId>spring-boot-dependencies</artifactId>
-    <groupId>org.springframework.boot</groupId>
-    <version>2.2.2.RELEASE</version>
-  </parent>
+
 
   <dependencies>
     <dependency>
@@ -37,9 +38,38 @@
 <!--      <artifactId>spring-boot-starter-freemarker</artifactId>-->
 <!--    </dependency>-->
 
+
+
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+
+
+
+<!--    <dependency>-->
+<!--      <groupId>org.mybatis.spring.boot</groupId>-->
+<!--      <artifactId>mybatis-spring-boot-starter</artifactId>-->
+<!--      <version>2.1.3</version>-->
+<!--    </dependency>-->
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid-spring-boot-starter</artifactId>
+      <version>1.1.17</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper-spring-boot-starter</artifactId>
+      <version>1.2.13</version>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.19</version>
     </dependency>
 
     <dependency>
@@ -55,19 +85,26 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
 
-
-
+    <!-- hutool工具集 -->
+    <dependency>
+      <groupId>cn.hutool</groupId>
+      <artifactId>hutool-all</artifactId>
+      <version>5.4.7</version>
+    </dependency>
   </dependencies>
 
   <build>
-<!--    <finalName>${project.artifactId}</finalName>-->
-    <!--<finalName>mmvv</finalName>-->
-    <finalName>bootcat</finalName>
+   <finalName>bootcat</finalName>
    <plugins>
      <plugin>
        <groupId>org.springframework.boot</groupId>
        <artifactId>spring-boot-maven-plugin</artifactId>
+       <version>2.7.5</version>
      </plugin>
    </plugins>
   </build>
