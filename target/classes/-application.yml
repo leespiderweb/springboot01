@@ -1,0 +1,63 @@
+#spring:
+#  profiles:
+#    active: test
+
+server:
+  port: 8080
+  servlet:
+    context-path: /boot
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm} %-5level %logger- %msg%n "
+    level: info
+  file:
+    path: "D:/logs/"
+    name: "boot1.log"
+    max-history: 7
+    max-size: 15MB
+  level:
+    com:
+      xxx:
+        dao: debug
+spring:
+#  freemarker:
+#    suffix: .ftl
+#    content-type: text/html
+#    charset: utf-8
+#    template-loader-path: classpath:/views/
+# thymeleaf配置项
+  thymeleaf:
+    prefix: classpath:/html/
+    cache: false
+
+  datasource:
+   # type: com.mchange.v2.c3p0.ComboPooledDataSource
+    url: jdbc:mysql://localhost:3306/db_lezijie_note?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password: root1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+#    initialSize: 5
+#    minIdle: 5
+#    maxActive: 20
+#    maxWait: 60000
+#    timeBetweenEvictionRunsMillis: 60000
+#    minEvictableIdleTimeMillis: 300000
+#    validationQuery: SELECT 1 FROM DUAL
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+
+
+mybatis:
+  mapper-locations: classpath:/mappers/*.xml
+  type-aliases-package: com.xxx.po
+  configuration:
+    map-underscore-to-camel-case: true
+
+pagehelp:
+  helper-dialect: mysql
